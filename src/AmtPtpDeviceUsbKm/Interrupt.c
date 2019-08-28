@@ -211,8 +211,8 @@ AmtPtpEvtUsbInterruptPipeReadComplete(
 			PtpReport.Contacts[i].X = x;
 			PtpReport.Contacts[i].Y = y;
 			PtpReport.Contacts[i].TipSwitch = (AmtRawToInteger(f->touch_major) << 1) > 0;
-			PtpReport.Contacts[i].Confidence = (AmtRawToInteger(f->touch_major) << 1) < 345 &&
-				(AmtRawToInteger(f->touch_minor) << 1) < 345;
+			PtpReport.Contacts[i].Confidence = (AmtRawToInteger(f->touch_major) << 1) < 1000 &&
+				(AmtRawToInteger(f->touch_minor) << 1) < 1000;
 		}
 	}
 
